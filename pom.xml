@@ -7,7 +7,7 @@
     <groupId>uk.co.paulcodes</groupId>
     <artifactId>multipaperplaceholders</artifactId>
     <name>MultiPaperPlaceholders</name>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.2-SNAPSHOT</version>
 
     <properties>
         <java.version>17</java.version>
