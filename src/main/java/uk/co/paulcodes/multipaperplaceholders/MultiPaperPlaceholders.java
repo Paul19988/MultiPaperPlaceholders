@@ -31,7 +31,7 @@ public class MultiPaperPlaceholders extends PlaceholderExpansion {
 
     @Override
     public @NotNull String getVersion() {
-        return "0.1-SNAPSHOT";
+        return "0.2-SNAPSHOT";
     }
 
     @Override
