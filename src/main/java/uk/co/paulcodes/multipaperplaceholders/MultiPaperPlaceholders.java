@@ -2,13 +2,8 @@ package uk.co.paulcodes.multipaperplaceholders;
 
 import com.github.puregero.multilib.MultiLib;
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
-import org.bukkit.Bukkit;
-import org.bukkit.craftbukkit.v1_18_R1.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
-import puregero.multipaper.ExternalPlayer;
-import puregero.multipaper.MultiPaper;
-import puregero.multipaper.MultiPaperConfig;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -81,11 +76,10 @@ public class MultiPaperPlaceholders extends PlaceholderExpansion {
             }
             return serverList.toString();
         }else if(identifier.contains("player_server_name")) {
-            if(MultiPaper.isExternalPlayer(player)) {
-                if(((CraftPlayer) player).getHandle() instanceof ExternalPlayer externalPlayer)
-                    return externalPlayer.externalServerConnection.externalServer.getName();
+            if(MultiLib.isExternalPlayer(player)) {
+                return MultiLib.getExternalServerName(player);
             }else{
-                return MultiPaperConfig.bungeeCordName;
+                return MultiLib.getLocalServerName();
             }
         }
 
